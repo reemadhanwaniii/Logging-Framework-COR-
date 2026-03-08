@@ -2,7 +2,7 @@ package handlers;
 
 import model.LogRequest;
 
-public class InfoLogger implements Logger{
+public class InfoLogger extends BaseLogger{
 
     private final int level;
 
@@ -15,8 +15,5 @@ public class InfoLogger implements Logger{
 
     }
 
-    @Override
-    public void setNext(Logger handler) {
 
-    }
 }
