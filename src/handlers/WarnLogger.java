@@ -5,8 +5,8 @@ import model.LogRequest;
 
 public class WarnLogger extends BaseLogger{
 
-   public WarnLogger() {
-       super(LogLevel.WARN);
+   public WarnLogger(Logger next) {
+       super(LogLevel.WARN,next);
    }
 
 

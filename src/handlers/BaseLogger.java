@@ -7,14 +7,15 @@ public abstract class BaseLogger implements Logger{
     protected Logger nextLogger;
     protected LogLevel logLevel;
 
-    public BaseLogger(LogLevel logLevel) {
+    public BaseLogger(LogLevel logLevel,Logger next) {
         this.logLevel = logLevel;
-    }
-
-    @Override
-    public void setNext(Logger next) {
         this.nextLogger = next;
     }
+
+//    @Override
+//    public void setNext(Logger next) {
+//        this.nextLogger = next;
+//    }
 
     @Override
     public void logMessage(LogRequest request) {

@@ -5,8 +5,8 @@ import model.LogRequest;
 
 public class ErrorLogger extends BaseLogger{
 
-  public ErrorLogger() {
-      super(LogLevel.ERROR);
+  public ErrorLogger(Logger next) {
+      super(LogLevel.ERROR,next);
   }
 
 

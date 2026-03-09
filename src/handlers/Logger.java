@@ -5,5 +5,5 @@ import model.LogRequest;
 public interface Logger {
 
     void logMessage(LogRequest request);
-    void setNext(Logger handler);
+//    void setNext(Logger handler);
 }
