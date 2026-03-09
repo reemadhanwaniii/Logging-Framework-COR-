@@ -1,19 +1,17 @@
 package handlers;
 
+import enums.LogLevel;
 import model.LogRequest;
 
 public class ErrorLogger extends BaseLogger{
 
-    private final int level;
+  public ErrorLogger() {
+      super(LogLevel.ERROR);
+  }
 
-    public ErrorLogger() {
-        this.level = 4;
-    }
 
     @Override
-    public void logMessage(LogRequest request) {
-
+    protected void write(LogRequest request) {
+        System.out.println("[Error] : "+request.getMessage());
     }
-
-
 }

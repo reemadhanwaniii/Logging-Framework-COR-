@@ -1,19 +1,17 @@
 package handlers;
 
+import enums.LogLevel;
 import model.LogRequest;
 
 public class WarnLogger extends BaseLogger{
 
-    private final int level;
+   public WarnLogger() {
+       super(LogLevel.WARN);
+   }
 
-    public WarnLogger() {
-        this.level = 3;
-    }
 
     @Override
-    public void logMessage(LogRequest request) {
-
+    protected void write(LogRequest request) {
+        System.out.println(" [WARN] : "+request.getMessage());
     }
-
-
 }

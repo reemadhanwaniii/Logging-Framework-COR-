@@ -1,18 +1,16 @@
 package handlers;
 
+import enums.LogLevel;
 import model.LogRequest;
 
 public class DebugLogger extends BaseLogger{
-    private final int level;
-
     public DebugLogger() {
-        this.level = 1;
+        super(LogLevel.DEBUG);
     }
+
 
     @Override
-    public void logMessage(LogRequest request) {
-
+    protected void write(LogRequest request) {
+        System.out.println("[DEBUG] "+request.getMessage());
     }
-
-
 }

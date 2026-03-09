@@ -1,19 +1,17 @@
 package handlers;
 
+import enums.LogLevel;
 import model.LogRequest;
 
 public class InfoLogger extends BaseLogger{
 
-    private final int level;
-
     public InfoLogger() {
-        this.level = 2;
+        super(LogLevel.INFO);
     }
+
 
     @Override
-    public void logMessage(LogRequest request) {
-
+    protected void write(LogRequest request) {
+        System.out.println(" [INFO] : "+request.getMessage());
     }
-
-
 }

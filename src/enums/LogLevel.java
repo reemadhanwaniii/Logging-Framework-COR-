@@ -1,8 +1,17 @@
 package enums;
 
 public enum LogLevel {
-    DEBUG,
-    INFO,
-    WARN,
-    ERROR;
+    DEBUG(1),
+    INFO(2),
+    WARN(3),
+    ERROR(4);
+
+    private final int level;
+    LogLevel(int level) {
+        this.level = level;
+    }
+
+    public int getLevel() {
+        return level;
+    }
 }
