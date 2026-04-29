@@ -19,7 +19,7 @@ public abstract class BaseLogger implements Logger{
 
     @Override
     public void logMessage(LogRequest request) {
-        if(request.getLevel().getLevel() >= this.logLevel.getLevel()) {
+        if(request.getLevel().getLevel() <= this.logLevel.getLevel()) {
             write(request);
         }
 

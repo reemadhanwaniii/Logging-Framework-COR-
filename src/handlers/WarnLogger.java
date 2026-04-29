@@ -12,6 +12,6 @@ public class WarnLogger extends BaseLogger{
 
     @Override
     protected void write(LogRequest request) {
-        System.out.println(" [WARN] : "+request.getMessage());
+        System.out.println("[WARN] : "+request.getMessage());
     }
 }

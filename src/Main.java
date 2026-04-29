@@ -6,7 +6,7 @@ import model.LogRequest;
 public class Main {
     static void main() {
         Logger logger = CreateHandlerFactory.createLogHandler();
-        LogRequest request = new LogRequest(LogLevel.INFO, " User Logged in");
+        LogRequest request = new LogRequest(LogLevel.DEBUG, " User Logged in");
 
         logger.logMessage(request);
     }
